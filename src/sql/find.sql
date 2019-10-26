@@ -1,0 +1,49 @@
+CREATE TABLE IF NOT EXISTS `thing`(
+   `id` INT UNSIGNED AUTO_INCREMENT,
+   `sn` VARCHAR(255) NULL,
+   `time` VARCHAR(255) NULL,
+   `locate` VARCHAR(255) NULL,
+   `describe` VARCHAR(255) NULL,
+   `back_way` VARCHAR(255) NULL,
+   `lost_info` VARCHAR(255) NULL,
+   `img` VARCHAR(255) NULL,
+   `openid` VARCHAR(255) NULL,
+   PRIMARY KEY ( `id` )
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `user`(
+   `id` INT UNSIGNED AUTO_INCREMENT,
+   `openid` VARCHAR(255) NULL,
+   `sid` VARCHAR(255) NULL,
+   PRIMARY KEY ( `id` )
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `log`(
+   `id` INT UNSIGNED AUTO_INCREMENT,
+   `openid` VARCHAR(255) NULL,
+   `time` VARCHAR(255) NULL,
+   `sn` VARCHAR(255) NULL,
+   PRIMARY KEY ( `id` )
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `old`(
+   `id` INT UNSIGNED AUTO_INCREMENT,
+   `sn` VARCHAR(255) NULL,
+   `time` VARCHAR(255) NULL,
+   `locate` VARCHAR(255) NULL,
+   `describe` VARCHAR(255) NULL,
+   `back_way` VARCHAR(255) NULL,
+   `lost_info` VARCHAR(255) NULL,
+   `img` VARCHAR(255) NULL,
+   `openid` VARCHAR(255) NULL,
+   `get_time` VARCHAR(255) NULL,
+   `get_openid` VARCHAR(255) NULL,
+   PRIMARY KEY ( `id` )
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `status`(
+	`status` VARCHAR(255) NULL,
+	PRIMARY KEY (`status`)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO status(status)VALUES(1);
